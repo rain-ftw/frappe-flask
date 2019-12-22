@@ -44,6 +44,8 @@
     
  6. route : localhost:5000/report
     
+     *Note: Initially each warehouse is pooled with 150 products*
+    
      ![report](images/report.PNG)
     
     
