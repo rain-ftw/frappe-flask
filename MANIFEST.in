@@ -1,0 +1,5 @@
+include Inventory/inventory_location.sql
+include Inventory/inventory_product.sql
+include Inventory/inventory_productmovement.sql
+graft Inventory/templates
+global-exclude *.pyc

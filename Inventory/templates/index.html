@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h4> Add Products </h4>
+		<br>
+		<form method="POST">
+			<label for='product-id'> Enter Product ID: </label>
+			<input type='text' name='p-id' required>
+			<input type='submit'  value='Add Product' name='product'>
+			<p> {{ data[0] }} </p>
+		</form>
+		<br>
+		<br>
+		<h4> Add Locations </h4>
+		<br>
+		<form method="POST">
+			<label for='location-id'> Enter Location ID: </label>
+			<input type='text' name='location-id' required>
+			<input type='submit'  value='Add Location' name='location'>
+			<p> {{ data[1] }} </p>
+		</form>
+		</form>
+		<br>
+		<br>
+		<h4> Add Movements </h4>
+		<br>
+		<form method="POST">
+			<label for='movement-id'> Enter Movement ID: </label>
+			<input type='text' name='movement-id' required>
+			<br>
+			<label for='from-location-id'> Select From Location: </label>
+			<select name='from-location-id'>
+				<option value='Select From Location' disabled selected> From Location </option>
+				{% for l in locations %}
+				<option value="{{ l[0] }}"> {{ l[0] }} </option>
+				{% endfor %}
+			</select>
+			<br>
+			<label for='to-location-id'> Enter To Location: </label>
+			<select name='to-location-id'>
+				<option value='Select To Location' disabled selected> To Location </option>
+				{% for l in locations %}
+				<option value="{{ l[0] }}"> {{ l[0] }} </option>
+				{% endfor %}
+			</select>
+			<br>
+			<label for='product-id'> Enter Product ID: </label>
+			<select name='product-id' required>
+				<option value='Select Product' disabled selected> Products </option>
+				{% for p in products %}
+				<option value="{{ p[0] }}"> {{ p[0] }} </option>
+				{% endfor %}
+			</select>
+			<br>
+			<label for='qty'> Enter Quantity </label>
+			<input type='text' name='qty' required>
+			<br>
+			<br>
+			<input type='submit'  value='Make Movement' name='movement'>
+			<p> {{ data[2] }} </p>
+		</form>
+	</body>
+</html>

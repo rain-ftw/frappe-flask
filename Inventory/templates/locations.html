@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			table,th,td{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<table border=1>
+			<tr>
+				<th> Locations </th>
+			</tr>
+			{% for l in locations %}
+			<tr>
+				<td> {{ l[0] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

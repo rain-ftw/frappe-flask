@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+		table,th,td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+	</head>
+	<body>
+		<table border=1>
+			<tr>
+				<th> ID </th>
+				<th> Timestamp </th>
+				<th> From Location </th>
+				<th> To Location </th>
+				<th> Product </th>
+				<th> Quantity </th>
+			</tr>
+			{% for m in movements %}
+			<tr>
+				<td>{{ m[0] }}</td>
+				<td>{{ m[1] }}</td>
+				<td>{{ m[2] }}</td>
+				<td>{{ m[3] }}</td>
+				<td>{{ m[4] }}</td>
+				<td>{{ m[5] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
